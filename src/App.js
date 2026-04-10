@@ -22,6 +22,7 @@ function App() {
         <Route path="/task" element={<Task/>}/>
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/help" element={<Help/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </Router>
   );
