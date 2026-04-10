@@ -5,7 +5,7 @@ import Login from './pages/login';
 import Task from './pages/task';
 import Notes from './pages/notes';
 import Help from './pages/help';
-
+import Signup from './pages/signup';
 function App() {
   return (
     // <div>
@@ -23,6 +23,7 @@ function App() {
         <Route path="/notes" element={<Notes/>}/>
         <Route path="/help" element={<Help/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/signup" element={<Signup/>}/>
       </Routes>
     </Router>
   );
