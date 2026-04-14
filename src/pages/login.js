@@ -35,6 +35,7 @@ function Login() {
             alert("Login successful!");
             setUsername("");
             setPassword("");
+            localStorage.setItem("currentUser", username);
             navigate("/home");
         }
     }
