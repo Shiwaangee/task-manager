@@ -36,7 +36,7 @@ function Login() {
             setUsername("");
             setPassword("");
             localStorage.setItem("currentUser", username);
-            navigate("/home");
+            navigate("/");
         }
     }
     return (
