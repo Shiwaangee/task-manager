@@ -72,7 +72,7 @@ function Task() {
                     {displayTask.map((item) => (
                         <li key={item.id}>
                             {item.completed ? <s>{item.text}</s> : item.text}
-                            <button onClick = {() => handleDelete(item.id)}>del</button>
+                            <button onClick = {() => handleDelete(item.id)}> del</button>
                         </li>
                     ))}
                 </ul>
