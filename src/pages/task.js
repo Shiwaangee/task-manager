@@ -39,7 +39,21 @@ function Task() {
                 break;
             }
         }
+    }
 
+    function handleDelete(id){
+        const currentUser = localStorage.getItem("currentUser");
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+
+        for (let i = 0; i < users.length; i++) {
+            if (users[i].username === currentUser) {
+                users[i].tasks = users[i].tasks.filter(eachTask => eachTask.id !== id);
+                localStorage.setItem("users", JSON.stringify(users));
+                setDisplayTask(users[i].tasks);
+                break;
+            }
+        }
+        
     }
     return (
         <div>
@@ -58,6 +72,7 @@ function Task() {
                     {displayTask.map((item) => (
                         <li key={item.id}>
                             {item.completed ? <s>{item.text}</s> : item.text}
+                            <button onClick = {() => handleDelete(item.id)}>del</button>
                         </li>
                     ))}
                 </ul>
