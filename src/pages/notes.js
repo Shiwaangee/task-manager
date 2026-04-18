@@ -49,6 +49,21 @@ function Notes() {
         }
     }
 
+    function handleDelete(id){
+        const users = JSON.parse(localStorage.getItem("users")) || [];
+        const currentUser = localStorage.getItem("currentUser");
+
+        for(let i = 0; i<users.length; i++){
+            if(users[i].username === currentUser){
+                // we found the user
+                users[i].notes = users[i].notes.filter(eachNote => eachNote.id !== id);
+                localStorage.setItem("users", JSON.stringify(users));
+                setDisplayNotes(users[i].notes);
+                break;
+            }
+        }
+    }
+
     return (
         <div>
             <NavBar />
@@ -73,6 +88,7 @@ function Notes() {
                         <li key = {item.id}>
                             <h6>{item.title}</h6>
                             <p>{item.content}</p>
+                            <button onClick = {() => handleDelete(item.id)}>Del</button>
                         </li>
                     ))
                     }
