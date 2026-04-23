@@ -85,16 +85,16 @@ function Task() {
         <div>
             <NavBar />
             {/* <h1>Tasks</h1> */}
-            <div className="flex flex-col justify-center mt-11 ml-14 mr-14 sticky top-0 bg-white z-10">
+            <div className="flex flex-col justify-center mt-20 ml-14 mr-14 sticky top-16 z-10">
                 <input
                     type="text"
                     placeholder="Enter your task here..."
                     value={newTask}
                     onChange={(e) => setNewTask(e.target.value)}
-                    className="flex-grow px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300"
+                    className="flex-grow px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-300 hover:ring-2 hover:ring-gray-800"
                 />
                 <div className="flex justify-center">
-                    <button onClick={handleAddTask} className="mt-6 px-5 py-2 hover:bg-blue-300 text-lg border hover:text-white">Add Task</button>
+                    <button onClick={handleAddTask} className="mt-6 px-5 py-2  hover:bg-blue-300 text-lg border hover:text-white active:scale-95 transition-transform duration-150">Add Task</button>
                 </div>
             </div>
 
