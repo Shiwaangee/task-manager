@@ -26,7 +26,7 @@ function NavBar() {
     }
     return (
         // <nav className="bg-gray-800 text-white px-6 py-3 flex justify-between items-center">
-        <nav className = "flex text-white bg-gray-800 px-6 py-3 justify-between items-center">
+        <nav className = "flex text-white bg-gray-800 px-6 py-3 justify-between items-center fixed w-full top-0 z-20">
                 
                 <Link to="/">Home</Link>
                 <Link to="/task">Task</Link>
