@@ -30,6 +30,10 @@ function Notes() {
         const users = JSON.parse(localStorage.getItem("users")) || [];
         const currentUser = localStorage.getItem("currentUser");
 
+        if(content.trim() === ""){
+            return;
+        }    
+
         for(let i = 0; i<users.length; i++){
             if(users[i].username === currentUser){
                 // we got the exact user
