@@ -54,24 +54,26 @@ function Signup() {
     navigate("/login");  }
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>Sign Up</h1>
-      <form onSubmit={handleSignup}>
+    <div className="mt-40">
+      <h1 className="text-3xl font-bold mb-14 flex justify-center">Sign Up</h1>
+      <form onSubmit={handleSignup} className = "flex flex-col items-center gap-4 mt-10">
         <input
           type="text"
           placeholder="Enter Username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          className = "border text-center px-20 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 hover:ring-2 hover:ring-gray-800"
         />
-        <br />
+        {/* <br /> */}
         <input
           type="password"
           placeholder="Enter Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          className = "border text-center rounded-lg py-2 px-5 focus:outline-none focus:ring-2 focus:ring-blue-300 hover:ring-2 hover:ring-gray-800"
         />
         <br />
-        <button type="submit">Create Account</button>
+        <button type="submit" className = "border px-2 py-1 hover:ring-2 hover:ring-gray-800 hover:bg-blue-300 hover:text-white text-lg active:scale-95 transition-transform duration-150">Create Account</button>
       </form>
     </div>
   );
