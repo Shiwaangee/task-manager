@@ -42,32 +42,33 @@ function Login() {
     return (
         <div>
             <NavBar />
-            {/* <h1>Login</h1>
-            <p>Enter your username and password to access your account.</p> */}
             <div className = "mt-24 flex flex-col items-center gap-4">
+                <h1 className = "text-3xl font-bold mb-2">Login</h1>
+                <p className = "mb-7 font-light font-serif italic">Enter your username and password to access your account.</p>
+
                 <input 
                     type = "text" 
                     placeholder="Enter Username" 
                     value = {username} 
                     onChange = {(e) => setUsername(e.target.value)}
-                    className = "border px-20 py-2 text-center hover:border-gray-800"
+                    className = "border border-gray-500 px-20 py-2 text-center hover:border-gray-800"
                 />
                 <input 
                     type = "password" 
                     placeholder="Enter Password" 
                     value = {password} 
                     onChange = {(e) => setPassword(e.target.value)}
-                    className = "border text-center py-1 px-3 hover:border-gray-800"
+                    className = "border border-gray-500 text-center py-1 px-3 hover:border-gray-800"
                 />
-                <button onClick={handleLogin}  className = "border py-1 px-5 mt-6 hover:border-gray-800 hover:bg-gray-200 active:scale-95 transition-transform duration-150">Login</button>
+                <button onClick={handleLogin}  className = "border  border-gray-500 py-1 px-5 mt-6 hover:border-gray-800 hover:bg-gray-200 active:scale-95 transition-transform duration-150">Login</button>
             </div>
             
             <div className = " mt-20 flex flex-col items-center">
-                <div className = "border rounded-full items-center flex flex-col px-8 py-4">
-                <h2 className = "text-lg ">New User? Sign Up Below</h2>
+                <div className = "border  border-gray-300 rounded-full items-center flex flex-col px-8 py-4">
+                <h2 className = "text-lg italic">New User? Sign Up Below</h2>
                 {/* <p>If you don’t have an account yet, sign up below.</p> */}
                 <Link to="/signup" >
-                    <button className = "border py-1 px-5 mt-4 hover:border-gray-800 hover:bg-gray-200 active:scale-95 transition-transform duration-150">Sign Up</button>
+                    <button className = "border border-gray-500 italic py-1 px-5 mt-4 hover:border-gray-800 hover:bg-gray-200 active:scale-95 transition-transform duration-150">Sign Up</button>
                 </Link>
                 </div>
             </div>
