@@ -33,9 +33,11 @@ function NavBar() {
                 <Link to="/notes">Notes</Link>
                 <Link to="/help">Help</Link>
                 <Link to="/login">Login</Link>
-                <button onClick = {handleLogOut}>LogOut</button>
-            
-                <button onClick = {deleteAccount} className="text-red-500">DelAct</button>
+                <div >
+                    <button onClick = {handleLogOut} className = "border text-sm p-1 mr-2 bg-gray-600 hover:bg-white hover:text-gray-800">LogOut</button>
+                
+                    <button onClick = {deleteAccount} className="text-red-500 border text-sm p-1 hover:bg-red-600 hover:text-white">DelAct</button>
+                </div>
           
         </nav>
     );
